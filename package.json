@@ -1,7 +1,7 @@
 {
   "name": "react-jcrop-plus",
   "main" : "dist/scripts/react-jcrop.js",
-  "version" : "1.0.0",
+  "version" : "1.0.1",
   "auth" : "jeffery ZHAO",
   "description" : "一个基于Jcrop 插件的react组件",
   "repository" : {
