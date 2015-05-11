@@ -11,19 +11,19 @@
 7 silly cache add   rawSpec: '.',
 7 silly cache add   spec: '/home/xixi/xixi/react-jcrop',
 7 silly cache add   type: 'directory' }
-8 verbose addLocalDirectory /home/xixi/.npm/react-jcrop-plus/1.0.0/package.tgz not in flight; packing
-9 verbose tar pack [ '/home/xixi/.npm/react-jcrop-plus/1.0.0/package.tgz',
+8 verbose addLocalDirectory /home/xixi/.npm/react-jcrop-plus/1.0.2/package.tgz not in flight; packing
+9 verbose tar pack [ '/home/xixi/.npm/react-jcrop-plus/1.0.2/package.tgz',
 9 verbose tar pack   '/home/xixi/xixi/react-jcrop' ]
-10 verbose tarball /home/xixi/.npm/react-jcrop-plus/1.0.0/package.tgz
+10 verbose tarball /home/xixi/.npm/react-jcrop-plus/1.0.2/package.tgz
 11 verbose folder /home/xixi/xixi/react-jcrop
-12 info prepublish react-jcrop-plus@1.0.0
-13 verbose addLocalTarball adding from inside cache /home/xixi/.npm/react-jcrop-plus/1.0.0/package.tgz
-14 silly cache afterAdd react-jcrop-plus@1.0.0
-15 verbose afterAdd /home/xixi/.npm/react-jcrop-plus/1.0.0/package/package.json not in flight; writing
-16 verbose afterAdd /home/xixi/.npm/react-jcrop-plus/1.0.0/package/package.json written
+12 info prepublish react-jcrop-plus@1.0.2
+13 verbose addLocalTarball adding from inside cache /home/xixi/.npm/react-jcrop-plus/1.0.2/package.tgz
+14 silly cache afterAdd react-jcrop-plus@1.0.2
+15 verbose afterAdd /home/xixi/.npm/react-jcrop-plus/1.0.2/package/package.json not in flight; writing
+16 verbose afterAdd /home/xixi/.npm/react-jcrop-plus/1.0.2/package/package.json written
 17 silly publish { name: 'react-jcrop-plus',
 17 silly publish   main: 'dist/scripts/react-jcrop.js',
-17 silly publish   version: '1.0.0',
+17 silly publish   version: '1.0.2',
 17 silly publish   auth: 'jeffery ZHAO',
 17 silly publish   description: '一个基于Jcrop 插件的react组件',
 17 silly publish   repository: { url: 'https://github.com/codeos/react-jcrop' },
@@ -54,61 +54,52 @@
 17 silly publish      'load-grunt-tasks': '^0.4.0',
 17 silly publish      'time-grunt': '^0.4.0' },
 17 silly publish   engines: { node: '>=0.10.0' },
-17 silly publish   readme: '# react-jcrop\n一个基于jcrop的react包装 \n',
+17 silly publish   readme: '# react-jcrop\n一个基于jcrop的react包装 \n\n\n## 使用说明\n\n1. 引入 jquery 和 Jcrop && css\n\n> bower install Jcrop\n\n> <link rel="stylesheet" type="text/css" href="/bower_components/Jcrop/css/jquery.Jcrop.css">\n> <script src="/bower_components/jquery/dist/jquery.js"></script>\n> <script type="text/javascript" src="/bower_components/Jcrop/js/jquery.Jcrop.js"></script>\n\n2. 引入 react-Jcrop-plus\n\n```\nvar Jcrop = require(\'react-jcrop-plus\');\n\n<Crop src={ this.state.img } options={ this.state.options } ref="crop" />\n\n```\n\n3. options 参数说明：\n\n\nallowSelect\ttrue\t允许新选框\n\nallowMove\ttrue\t允许选框移动\n\nallowResize\ttrue\t允许选框缩放\n\ntrackDocument\ttrue\t拖动选框时，允许超出图像以外的地方时继续拖动。\n\nbaseClass\t\'jcrop\'\t基础样式名前缀。说明：class="jcrop-holder"，更改的只是其中的 jcrop。\n\n例：假设值为 "test"，那么样式名会更改为 "test-holder"\n\naddClass\tnull\t添加样式。\n\n例：假设值为 "test"，那么会添加样式到class="jcrop-holder test"\n\nbgColor\t\'black\'\t背景颜色。颜色关键字、HEX、RGB 均可。\n\nbgOpacity\t0.6\t背景透明度\n\nbgFade\tfalse\t使用背景过渡效果\n\nborderOpacity\t0.4\t选框边框透明度\n\nhandleOpacity\t0.5\t缩放按钮透明度\n\nhandleSize\t9\t缩放按钮大小\n\naspectRatio\t0\t选框宽高比。说明：width/height\n\nkeySupport\ttrue\t支持键盘控制。按键列表：上下左右（移动选框）、Esc（取消选框）\n\ncreateHandles\t[\'n\',\'s\',\'e\',\'w\',\'nw\',\'ne\',\'se\',\'sw\']\t设置边角控制器\n\ncreateDragbars\t[\'n\',\'s\',\'e\',\'w\']\t设置边框控制器\n\ncreateBorders\t[\'n\',\'s\',\'e\',\'w\']\t设置边框\n\ndrawBorders\ttrue\t绘制边框\n\ndragEdges\ttrue\t允许拖动边框\n\nfixedSupport\ttrue\t支持 fixed，例如：IE6、iOS4\n\ntouchSupport\tnull\t支持触摸事件\n\nshade\tnull\t使用更好的遮罩\n\nboxWidth\t0\t画布宽度\n\nboxHeight\t0\t画布高度\n\nboundary\t2\t边界。说明：可以从边界开始拖动鼠标选择裁剪区域\n\nfadeTime\t400\t过度效果的时间\n\nanimationDelay\t20\t动画延迟\n\nswingSpeed\t3\t过渡速度\n\nminSelect\t[0,0]\t选框最小选择尺寸。说明：若选框小于该尺寸，则自动取消选择\n\nmaxSize\t[0,0]\t选框最大尺寸\n\nminSize\t[0,0]\t选框最小尺寸\n\nonChange\tfunction(){}\t选框改变时的事件\n\nonSelect\tfunction(){}\t选框选定时的事件\n\nonDblClick\tfunction(){}\t在选框内双击时的事件\n\nonRelease\tfunction(){}\t取消选框时的事件\n\n例:\n\n```\nvar App = React.createClass({\n    getInitialState : function(){\n        return {\n            options :{\n                aspectRatio : 1,\n                minSize : [50,50],\n                maxSize : [180 , 180],\n                onChange : this.handleCropChange,\n                onSelect : this.handleCropSelect,\n                onDblClick : this.handleCropDoubleClick,\n                onRelease : this.handleCropRelease\n            },\n            img : \'/images/test-def.jpg\'\n        };\n    },\n    handleCropChange : function(){\n        console.log(\'cropChange\');\n    },\n    handleCropSelect : function(){\n        console.log(\'cropSelect\');\n    },\n    handleCropDoubleClick : function(){\n        console.log(\'cropDBClick\');\n    },\n    handleCropRelease : function(){\n        console.log(\'cropRelease\');\n    },\n    handleSelectFile : function(){\n        \n        \n    },\n    handleClick : function(){\n        var $crop = this.refs.crop;\n\n        console.log($crop.tellSelect());\n    },\n    render : function() {\n        return (\n            /*jshint ignore:start */\n            <div>\n                <input type="file" onChange={this.handleSelectFile } ref="files"/>\n                <Crop src={ this.state.img } onCropChange={ this.handleCropChange } options={ this.state.options } ref="crop"/>\n                <a hef="javascript:;" onClick={ this.handleClick } >修改图片</a>\n            </div>\n            /*jshint ignore:end */\n        );\n    }\n});\n\n\n/*jshint ignore:start */\nReact.render(<App />,document.getElementById(\'app\'));\n/*jshint ignore:end */\n\n\n```\n\n\n4. API接口\n\nsetImage(string)\t设定（或改变）图像。例：jcrop_api.setImage(\'newpic.jpg\')\n\nsetOptions(object)\t设定（或改变）参数，格式与初始化设置参数一样\n\nsetSelect(array)\t创建选框，参数格式为：[x, y, x2, y2]\n\nanimateTo(array)\t用动画效果创建选框，参数格式为：[x, y, x2, y2]\n\nrelease()\t取消选框\n\ndisable()\t禁用 Jcrop。说明：已有选框不会被清除。\n\nenable()\t启用 Jcrop\n\ndestroy()\t移除 Jcrop\n\ntellSelect()\t获取选框的值（实际尺寸）。例：console.log(jcrop_api.tellSelect())\n\ntellScaled()\t获取选框的值（界面尺寸）。例：console.log(jcrop_api.tellScaled())\n\ngetBounds()\t获取图片实际尺寸，格式为：[w, h]\n\ngetWidgetSize()\t获取图片显示尺寸，格式为：[w, h]\n\ngetScaleFactor()\t获取图片缩放的比例，格式为：[w, h]\n\n\n例:\n\n```\n\nvar App = React.createClass({\n    ...........\n    handleClick : function(){\n        var $crop = this.refs.crop;\n\n        $crop.setImage(string);\n        \n        $crop.setOptions({....});\n        \n        .....同上\n\n    },\n    render : function() {\n        return (\n            /*jshint ignore:start */\n            <div>\n                <Crop src={ this.state.img } onCropChange={ this.handleCropChange } options={ this.state.options } ref="crop"/>\n                <a hef="javascript:;" onClick={ this.handleClick } >修改图片</a>\n            </div>\n            /*jshint ignore:end */\n        );\n    }\n});\n\n\n```',
 17 silly publish   readmeFilename: 'README.md',
-17 silly publish   gitHead: 'bb3e7d016487c4932bd4a1e0be50c1d95e70c04b',
+17 silly publish   gitHead: '5a89bc1275bcd28bdb594f3f04924fdb6477d1e7',
 17 silly publish   bugs: { url: 'https://github.com/codeos/react-jcrop/issues' },
 17 silly publish   homepage: 'https://github.com/codeos/react-jcrop',
-17 silly publish   _id: 'react-jcrop-plus@1.0.0',
+17 silly publish   _id: 'react-jcrop-plus@1.0.2',
 17 silly publish   scripts: {},
-17 silly publish   _shasum: '4e89584bb9b8e23a56f246b6e3a1831cf926e3ab',
+17 silly publish   _shasum: '2c14365b405ab02101883343948732efbe82d627',
 17 silly publish   _from: '.' }
 18 silly mapToRegistry name react-jcrop-plus
 19 silly mapToRegistry using default registry
-20 silly mapToRegistry registry https://registry.npmjs.org/
-21 silly mapToRegistry uri https://registry.npmjs.org/react-jcrop-plus
-22 verbose publish registryBase https://registry.npmjs.org/
-23 silly publish uploading /home/xixi/.npm/react-jcrop-plus/1.0.0/package.tgz
-24 verbose request uri https://registry.npmjs.org/react-jcrop-plus
+20 silly mapToRegistry registry http://registry.npm.taobao.org/
+21 silly mapToRegistry uri http://registry.npm.taobao.org/react-jcrop-plus
+22 verbose publish registryBase http://registry.npm.taobao.org/
+23 silly publish uploading /home/xixi/.npm/react-jcrop-plus/1.0.2/package.tgz
+24 verbose request uri http://registry.npm.taobao.org/react-jcrop-plus
 25 verbose request sending authorization for write operation
-26 info attempt registry request try #1 at 14:38:06
-27 verbose request using bearer token for auth
-28 verbose request id 515177284d6b0eeb
-29 http request PUT https://registry.npmjs.org/react-jcrop-plus
-30 http 403 https://registry.npmjs.org/react-jcrop-plus
-31 verbose headers { 'content-type': 'application/json',
-31 verbose headers   'cache-control': 'max-age=60',
-31 verbose headers   'content-length': '95',
-31 verbose headers   'accept-ranges': 'bytes',
-31 verbose headers   date: 'Mon, 11 May 2015 06:38:07 GMT',
-31 verbose headers   via: '1.1 varnish',
-31 verbose headers   connection: 'keep-alive',
-31 verbose headers   'x-served-by': 'cache-nrt6128-NRT',
-31 verbose headers   'x-cache': 'MISS',
-31 verbose headers   'x-cache-hits': '0',
-31 verbose headers   'x-timer': 'S1431326286.580149,VS0,VE610' }
-32 verbose request invalidating /home/xixi/.npm/registry.npmjs.org/react-jcrop-plus on PUT
-33 error publish Failed PUT 403
-34 verbose stack Error: "You cannot publish over the previously published version 1.0.0." : react-jcrop-plus
-34 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:254:14)
-34 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:178:14)
-34 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:344:22)
-34 verbose stack     at Request.emit (events.js:110:17)
-34 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1239:14)
-34 verbose stack     at Request.emit (events.js:129:20)
-34 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1187:12)
-34 verbose stack     at IncomingMessage.emit (events.js:129:20)
-34 verbose stack     at _stream_readable.js:908:16
-34 verbose stack     at process._tickCallback (node.js:355:11)
-35 verbose statusCode 403
-36 verbose pkgid react-jcrop-plus
-37 verbose cwd /home/xixi/xixi/react-jcrop
-38 error Linux 3.11.0-26-generic
-39 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "publish"
-40 error node v0.12.0
-41 error npm  v2.5.1
-42 error code E403
-43 error "You cannot publish over the previously published version 1.0.0." : react-jcrop-plus
-44 error If you need help, you may report this error at:
-44 error     <http://github.com/npm/npm/issues>
-45 verbose exit [ 1, true ]
+26 info attempt registry request try #1 at 13:15:11
+27 verbose request id 168b76aa70cf4d41
+28 http request PUT http://registry.npm.taobao.org/react-jcrop-plus
+29 http 403 http://registry.npm.taobao.org/react-jcrop-plus
+30 verbose headers { server: 'nginx/1.1.19',
+30 verbose headers   date: 'Tue, 12 May 2015 05:15:11 GMT',
+30 verbose headers   'content-type': 'application/json; charset=utf-8',
+30 verbose headers   'transfer-encoding': 'chunked',
+30 verbose headers   connection: 'keep-alive',
+30 verbose headers   'x-readtime': '16',
+30 verbose headers   'content-encoding': 'gzip' }
+31 verbose request invalidating /home/xixi/.npm/registry.npm.taobao.org/react-jcrop-plus on PUT
+32 error publish Failed PUT 403
+33 verbose stack Error: no_perms Private mode enable, only admin can publish this module: react-jcrop-plus
+33 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:254:14)
+33 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:184:7
+33 verbose stack     at Gunzip.onEnd (zlib.js:227:5)
+33 verbose stack     at Gunzip.emit (events.js:129:20)
+33 verbose stack     at _stream_readable.js:908:16
+33 verbose stack     at process._tickCallback (node.js:355:11)
+34 verbose statusCode 403
+35 verbose pkgid react-jcrop-plus
+36 verbose cwd /home/xixi/xixi/react-jcrop
+37 error Linux 3.11.0-26-generic
+38 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "publish"
+39 error node v0.12.0
+40 error npm  v2.5.1
+41 error code E403
+42 error no_perms Private mode enable, only admin can publish this module: react-jcrop-plus
+43 error If you need help, you may report this error at:
+43 error     <http://github.com/npm/npm/issues>
+44 verbose exit [ 1, true ]
